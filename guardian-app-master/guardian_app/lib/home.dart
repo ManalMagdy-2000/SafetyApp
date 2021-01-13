@@ -61,17 +61,7 @@ class _HomeState extends State<Home> {
 
             ),
             iconTheme: IconThemeData(color: Colors.grey,size: 80),
-            actions: <Widget>[
-              IconButton(
-                icon: Icon(
-                  Icons.notifications,
-                  color: Colors.grey,
-                ),
-                onPressed: () {
-                  // do something
-                },
-              )
-            ],
+           
           )),
         ),
 
@@ -203,6 +193,15 @@ class _HomeState extends State<Home> {
         ),
       ),
       // Disable opening the end drawer with a swipe gesture.
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: new FloatingActionButton(
+        backgroundColor: Colors.redAccent,
+        onPressed:(){ },
+        child: Text("SOS",
+          style: TextStyle(
+              fontFamily: 'Montserrat', fontWeight:FontWeight.bold,color: Colors.white),
+        ),
+      ),
       endDrawerEnableOpenDragGesture: false,
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: _currentIndex,
