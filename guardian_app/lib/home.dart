@@ -44,12 +44,11 @@ class _HomeState extends State<Home> {
                 padding: const EdgeInsets.only(top: 20.0),
                 child: Image.asset("assets/logo.png",
                     height: 81, width: 81, alignment: Alignment.topLeft),
-
-              ),
-              iconTheme: IconThemeData(color: Colors.grey,size: 80),
-            )),
-      ),
-
+            ),
+            iconTheme: IconThemeData(color: Colors.grey,size: 80),
+           
+          )),
+        ),
       endDrawer: Container(
         child: Drawer(
           child: Container(
