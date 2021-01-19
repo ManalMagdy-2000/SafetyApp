@@ -8,6 +8,7 @@ import './ContactUs.dart';
 import 'Animation/FadeAnimation.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 class SignUpScreen extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,27 +70,15 @@ class SignUpScreen extends StatelessWidget {
               Padding( padding: EdgeInsets.only(top:30.0)),
               Column(
                 children: <Widget>[
-                  FadeAnimation(1.2, makeInput(label: "Full Name")),
-                  FadeAnimation(1.3, makeInput(label: "Date Of Birth", obscureText: true)),
-
+                   makeInput(label: "First Name"),
+                   makeInput(label: "Last Name")
                 ],
               ),
-              FadeAnimation(1.6, Container(
+
+
+              Container(
                 padding: EdgeInsets.only(top: 2, left: 3),
-                decoration: BoxDecoration(
-
-                    borderRadius: BorderRadius.circular(50),
-                    border: Border(
-                      bottom: BorderSide(color: Colors.black),
-                      top: BorderSide(color: Colors.black),
-                      left: BorderSide(color: Colors.black),
-                      right: BorderSide(color: Colors.black),
-                    )
-                ),
-
-
                 child:MaterialButton(
-
                   minWidth: double.infinity,
                   height: 60,
                   onPressed: () {
@@ -109,11 +98,11 @@ class SignUpScreen extends StatelessWidget {
 
                   ),),
                 ),
-              )),
-              FadeAnimation(1.7, Row(
+              ),
+              Row(
                 mainAxisAlignment: MainAxisAlignment.center,
 
-              )),
+              ),
             ],
 
           )],
@@ -145,7 +134,7 @@ class SignUpScreen extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(height: 30,),
+        SizedBox(height: 30),
       ],
     );
 
