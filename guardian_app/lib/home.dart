@@ -128,7 +128,7 @@ class _HomeState extends State<Home> {
                               context,
                               new MaterialPageRoute(
                                   builder: (BuildContext context) =>
-                                  new ContactUsPage()));
+                                  new ContactUs()));
                         },
                       ),
                     ),
