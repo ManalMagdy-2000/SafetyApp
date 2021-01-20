@@ -74,12 +74,16 @@ class _MyHomePageState extends State<MyHomePage> {
           
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        floatingActionButton: new FloatingActionButton(
-          backgroundColor: Colors.redAccent,
-          onPressed:(){ },
-          child: Text("SOS",
-            style: TextStyle(
-                fontFamily: 'Montserrat', fontWeight:FontWeight.bold,color: Colors.white),
+        floatingActionButton: Container(
+          height: 75,
+          width: 75,
+          child: new FloatingActionButton(
+            backgroundColor:createMaterialColor(Color(0xFFF83E3E)),
+            onPressed:(){ },
+            child: Text("SOS",
+              style: TextStyle(
+                  fontFamily: 'Montserrat', fontWeight:FontWeight.w900,color: Colors.white, fontSize: 25),
+            ),
           ),
         ),
       ),
