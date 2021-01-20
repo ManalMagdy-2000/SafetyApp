@@ -132,27 +132,6 @@ class _HomeState extends State<Home> {
                         },
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: ListTile(
-                        title: Text('Settings',
-                            style: TextStyle(
-                                fontSize: 18.0,
-                                fontWeight: FontWeight.w600,
-                                color: createMaterialColor(Color(0xFF5E5E5E)))),
-                        leading: new Icon(Icons.settings,
-                            color: createMaterialColor(Color(0xFF5E5E5E))),
-                        onTap: () {
-                          Navigator.pop(context);
-
-                          Navigator.push(
-                              context,
-                              new MaterialPageRoute(
-                                  builder: (BuildContext context) =>
-                                  new SettingsPage()));
-                        },
-                      ),
-                    ),
                     Container(
                       height: 80.0,
                     ),
@@ -179,51 +158,6 @@ class _HomeState extends State<Home> {
                 color: Colors.white),
           ),
         ),
- 
-        /*floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        floatingActionButton: new FloatingActionButton(
-          backgroundColor: Colors.redAccent,
-          onPressed:(){ },
-          child: Text("SOS",
-            style: TextStyle(
-                fontFamily: 'Montserrat', fontWeight:FontWeight.bold,color: Colors.white),
-          ),
-        ),*/
-        /**bottomNavigationBar: BottomNavigationBar(
-            currentIndex: _currentIndex,
-            iconSize: 35.0,
-            selectedItemColor: createMaterialColor(Color(0xFF5ACFE4)),
-            unselectedItemColor: createMaterialColor(Color(0xFFC4C4C4)),
-            selectedFontSize: 15.0,
-            backgroundColor: Colors.white,
-            elevation: 50,
-            items: [
-              BottomNavigationBarItem(
-                icon: Icon(Icons.home),
-                title: Text(
-                  'Home',
-                  style: TextStyle(
-                      fontFamily: 'Montserrat', fontWeight: FontWeight.w600),
-                ),
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.person),
-                title: Text(
-                  'Profile',
-                  style: TextStyle(
-                      fontFamily: 'Montserrat', fontWeight: FontWeight.w600),
-                ),
-              ),
-            ],
-            onTap: (index) {
-              
-                        setState(() => _page = _children[index]);
-
-                _currentIndex = index;
-              
-            }),
-            **/
-
         body: SingleChildScrollView(
           child: new Center(
             child: Padding(
