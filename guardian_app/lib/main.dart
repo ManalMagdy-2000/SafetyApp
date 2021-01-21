@@ -4,18 +4,15 @@ import './home.dart';
 import './profile.dart';
 import 'MaterialColor.dart';
 
-
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(fontFamily: 'Montserrat'), 
-      home: MyHomePage());
-       
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(fontFamily: 'Montserrat'),
+        home: MyHomePage());
   }
 }
 
@@ -25,10 +22,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  List<Widget> pages = [
-    Home(),
-    ProfilePage()
-  ];
+  List<Widget> pages = [Home(), ProfilePage()];
 
   @override
   Widget build(BuildContext context) {
@@ -40,6 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: pages,
         ),
         bottomNavigationBar: Container(
+          height: 70,
           // decoration: BoxDecoration(
           //   boxShadow: [
           //     BoxShadow(
@@ -47,23 +42,48 @@ class _MyHomePageState extends State<MyHomePage> {
           //     )
           //   ]
           // ),
-          margin: EdgeInsets.only(bottom: 20),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.5),
+                spreadRadius: 5,
+                blurRadius: 7,
+                offset: Offset(0, 3), // changes position of shadow
+              ),
+            ],
+          ),
+          margin: EdgeInsets.fromLTRB(0, 5, 0, 0),
           child: new TabBar(
             tabs: [
               Tab(
-                icon: Icon(Icons.home),
+                icon: SizedBox(
+                    height: 20,
+                    width: 40,
+                    child: Icon(
+                      Icons.home,
+                      size: 35,
+                    ),
+                  ),
                 child: Text(
                   'Home',
                   style: TextStyle(
-                      fontFamily: 'Montserrat', fontWeight: FontWeight.w600),
+                      fontFamily: 'Montserrat',
+                      fontWeight: FontWeight.w600,
+                      fontSize: 15),
                 ),
               ),
               Tab(
-                icon: Icon(Icons.person),
+                icon: SizedBox(
+                  height: 20,
+                    width: 40,
+                  child: Icon(Icons.person, size: 35)),
                 child: Text(
-                  'Home',
+                  'Profile',
                   style: TextStyle(
-                      fontFamily: 'Montserrat', fontWeight: FontWeight.w600),
+                      fontFamily: 'Montserrat',
+                      fontWeight: FontWeight.w600,
+                      fontSize: 15),
                 ),
               ),
             ],
@@ -71,18 +91,21 @@ class _MyHomePageState extends State<MyHomePage> {
             labelColor: createMaterialColor(Color(0xFF5ACFE4)),
             indicatorColor: Colors.transparent,
           ),
-          
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: Container(
           height: 75,
           width: 75,
           child: new FloatingActionButton(
-            backgroundColor:createMaterialColor(Color(0xFFF83E3E)),
-            onPressed:(){ },
-            child: Text("SOS",
+            backgroundColor: createMaterialColor(Color(0xFFF83E3E)),
+            onPressed: () {},
+            child: Text(
+              "SOS",
               style: TextStyle(
-                  fontFamily: 'Montserrat', fontWeight:FontWeight.w900,color: Colors.white, fontSize: 25),
+                  fontFamily: 'Montserrat',
+                  fontWeight: FontWeight.w900,
+                  color: Colors.white,
+                  fontSize: 25),
             ),
           ),
         ),
