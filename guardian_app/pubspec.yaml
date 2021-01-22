@@ -27,10 +27,12 @@ dependencies:
   bottom_navy_bar: ^5.6.0
   contact_picker: ^0.0.2
   flutter_signin_button: ^1.1.0
+  roundcheckbox: ^1.0.0+1
   http: ^0.12.2
   flutter_svg_provider: ^0.1.8
   flutter:
     sdk: flutter
+
 
 
 

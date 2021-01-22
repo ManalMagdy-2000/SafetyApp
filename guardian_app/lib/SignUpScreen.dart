@@ -7,8 +7,14 @@ import 'package:guardian_app/ContactUs.dart';
 import './ContactUs.dart';
 import 'Animation/FadeAnimation.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
-class SignUpScreen extends StatelessWidget {
 
+class SignUpScreen extends StatefulWidget {
+  @override
+  _SignUpScreenState createState() => _SignUpScreenState();
+}
+class _SignUpScreenState extends State<SignUpScreen> {
+  @override
+  DateTime _dateTime;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,7 +59,7 @@ class SignUpScreen extends StatelessWidget {
 
         (
 
-           Padding( padding: EdgeInsets.only(top:40.0))),
+           Padding( padding: EdgeInsets.only(top:30.0))),
             SignInButton(
             Buttons.Google,
             onPressed: () {},
@@ -67,15 +73,34 @@ class SignUpScreen extends StatelessWidget {
                 thickness: 2.0,
                 color:Colors.grey[500]
               ),
-              Padding( padding: EdgeInsets.only(top:30.0)),
+              Padding( padding: EdgeInsets.only(top:20.0)),
               Column(
                 children: <Widget>[
                    makeInput(label: "First Name"),
-                   makeInput(label: "Last Name")
+                   makeInput(label: "Last Name"),
                 ],
               ),
-
-
+              Text(_dateTime == null ? 'nothing has been picked' : _dateTime.toString()),
+              ButtonTheme(
+                minWidth: 200.0,
+                height: 50.0,
+                child:OutlineButton(
+                  color:Colors.black,
+                child:Align(
+                  alignment:Alignment.bottomRight,
+                  child:new Icon(Icons.date_range_outlined,),
+                )
+                ,
+                onPressed: () {
+                   showDatePicker(context: context, initialDate:DateTime.now(), firstDate: DateTime(1960), lastDate: DateTime(2222)
+                   ).then((date) {
+                     setState(() {
+                       _dateTime = date;
+                     });
+                   });
+                },
+              )),
+              Padding(padding: const EdgeInsets.only(top: 20.0)),
               Container(
                 padding: EdgeInsets.only(top: 2, left: 3),
                 child:MaterialButton(
@@ -125,7 +150,7 @@ class SignUpScreen extends StatelessWidget {
         TextField(
           obscureText: obscureText,
           decoration: InputDecoration(
-            contentPadding: EdgeInsets.symmetric(vertical: 0, horizontal: 10),
+            contentPadding: EdgeInsets.symmetric(vertical: 0, horizontal: 8),
             enabledBorder: OutlineInputBorder(
                 borderSide: BorderSide(color: Colors.grey[400])
             ),
@@ -139,5 +164,6 @@ class SignUpScreen extends StatelessWidget {
     );
 
   }
+
 
 }

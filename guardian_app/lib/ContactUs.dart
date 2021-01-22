@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:guardian_app/addContact.dart';
-import 'Animation/FadeAnimation.dart';
+
 
 class ContactUsPage extends StatefulWidget {
 
@@ -57,24 +57,13 @@ class _ContactUsPageState extends State<ContactUsPage> {
 
               Column(
                 children: <Widget>[
-                  FadeAnimation(1.2, makeInput(label: "Email")),
-                  FadeAnimation(1.3, makeInput(label: "Password", obscureText: true)),
-                  FadeAnimation(1.4, makeInput(label: "Phone Number")),
+                  makeInput(label: "Email"),
+                  makeInput(label: "Password", obscureText: true),
+                  makeInput(label: "Phone Number"),
                 ],
               ),
-              FadeAnimation(1.5, Container(
-                padding: EdgeInsets.only(top: 3, left: 3),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(50),
-                    border: Border(
-                      bottom: BorderSide(color: Colors.black),
-                      top: BorderSide(color: Colors.black),
-                      left: BorderSide(color: Colors.black),
-                      right: BorderSide(color: Colors.black),
-                    )
-                ),
-
-
+              Container(
+                padding: EdgeInsets.only(top: 60.0),
                 child:MaterialButton(
                   minWidth: double.infinity,
                   height: 60,
@@ -95,11 +84,11 @@ class _ContactUsPageState extends State<ContactUsPage> {
 
                   ),),
                 ),
-              )),
-              FadeAnimation(1.6, Row(
+              ),
+               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
 
-              )),
+              ),
             ],
           ),
         ),

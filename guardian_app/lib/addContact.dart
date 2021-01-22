@@ -29,6 +29,7 @@ class _AddContactPageState extends State<AddContactPage> {
                   ),
               )
             ),
+
           );
         }
       );
@@ -81,7 +82,6 @@ class _AddContactPageState extends State<AddContactPage> {
                 color: Colors.white,
                 padding: const EdgeInsets.only(bottom:40.0,top: 20.0,right: 80.0,left: 80.0),
                 child: new Icon(Icons.add_circle , color: Colors.amber,size:60,
-                  semanticLabel: 'hello'
                 ),
 
                 onPressed: () async {
@@ -96,12 +96,13 @@ class _AddContactPageState extends State<AddContactPage> {
               new Text(
                 _contact == null ? 'No contact selected.' : _contact.toString(),
               ),
-              Padding(padding:const EdgeInsets.only(top:100.0)),
+              Padding(padding:const EdgeInsets.only(top:150.0)),
               new Text("By continuing, you agree to accept our \n Privacy Policy & Terms of Service.",
               style: TextStyle(
                 color:Colors.grey,fontSize:10
               )),
-              Padding(padding:const EdgeInsets.only(top:15.0)),
+
+              Padding(padding:const EdgeInsets.only(top:20.0)),
               new MaterialButton(
                 minWidth: double.infinity,
                 height: 60,
