@@ -14,7 +14,7 @@ class _FeedbackPageState extends State<FeedbackPage> {
   Widget build(BuildContext context){
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('About Us Page'),
+        title: new Text('Feedback'),
       ),
 
     );

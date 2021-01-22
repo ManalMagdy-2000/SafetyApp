@@ -30,6 +30,8 @@ dependencies:
   roundcheckbox: ^1.0.0+1
   http: ^0.12.2
   flutter_svg_provider: ^0.1.8
+  custom_navigator: ^0.3.0
+
   flutter:
     sdk: flutter
 

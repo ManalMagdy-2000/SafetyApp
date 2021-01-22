@@ -1,34 +1,29 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:guardian_app/addContact.dart';
 
+=======
+>>>>>>> 6b83d09e3e888b9501f8ca72dd7f2f2ebcd4295c
 
-class ContactUsPage extends StatefulWidget {
+
+class ContactUs extends StatefulWidget {
 
   @override 
 
-  _ContactUsPageState createState () => new _ContactUsPageState();
+  _ContactUsState createState () => new _ContactUsState();
 
 }
 
-class _ContactUsPageState extends State<ContactUsPage> {
+class _ContactUsState extends State<ContactUs> {
 
   @override 
 
   Widget build(BuildContext context){
     return new Scaffold(
-      resizeToAvoidBottomInset: true,
-      backgroundColor: Colors.cyan[50],
       appBar: new AppBar(
-        elevation: 0,
-        brightness: Brightness.light,
-        backgroundColor: Colors.cyan[50],
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: Icon(Icons.arrow_back_ios, size: 20, color: Colors.black),
-        ),
+        title: new Text('Contact Us'),
       ),
+<<<<<<< HEAD
       body: SingleChildScrollView(
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: 40),
@@ -94,34 +89,9 @@ class _ContactUsPageState extends State<ContactUsPage> {
         ),
 
       ),
+=======
+
+>>>>>>> 6b83d09e3e888b9501f8ca72dd7f2f2ebcd4295c
     );
   }
-  Widget makeInput({label, obscureText = false}) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
-        Text(label, style: TextStyle(
-            fontSize: 15,
-            fontWeight: FontWeight.w400,
-            color: Colors.black87
-        ),),
-        SizedBox(height: 5,),
-        TextField(
-          obscureText: obscureText,
-          decoration: InputDecoration(
-            contentPadding: EdgeInsets.symmetric(vertical: 0, horizontal: 10),
-            enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.grey[400])
-            ),
-            border: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.grey[400])
-            ),
-          ),
-        ),
-        SizedBox(height: 30,),
-
-      ],
-
-    );
-  }
-  }
+}

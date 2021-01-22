@@ -3,8 +3,7 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:guardian_app/ContactUs.dart';
-import './ContactUs.dart';
+import './SignUpContactDetails.dart';
 import 'Animation/FadeAnimation.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 
@@ -108,7 +107,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   height: 60,
                   onPressed: () {
                     Navigator.push(context, MaterialPageRoute(
-                        builder: (context) => ContactUsPage()
+                        builder: (context) => SignUpContactDetails()
                     ));
                   },
                   color: Colors.black87,
