@@ -3,6 +3,9 @@ import './SplashScreen.dart';
 import './home.dart';
 import './profile.dart';
 import 'MaterialColor.dart';
+import './AboutUs.dart';
+import './Feedback.dart';
+import './ContactUs.dart';
 
 void main() => runApp(MyApp());
 

@@ -1,13 +1,11 @@
-import 'dart:async';
-import 'package:custom_navigator/custom_navigation.dart';
-import 'package:flutter_svg_provider/flutter_svg_provider.dart';
+
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import './MaterialColor.dart';
-import './AboutUs.dart';
-import './Settings.dart';
-import './Feedback.dart';
-import './ContactUs.dart';
+import 'AboutUs.dart';
+import 'ContactUs.dart';
+import 'Feedback.dart';
+
 
 
 class Home extends StatefulWidget {
