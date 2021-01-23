@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/button_list.dart';
 import 'package:flutter_signin_button/button_view.dart';
+import 'package:guardian_app/CustomMessage.dart';
 import './Home.dart';
 import 'Animation/FadeAnimation.dart';
 
@@ -38,22 +39,22 @@ class _SignInScreenState extends State<SignInScreen> {
             children: <Widget>[
               Column(
                 children: <Widget>[
-                  FadeAnimation(1.2, Text("Sign In", style: TextStyle(
+                 Text("Sign In", style: TextStyle(
                       fontSize: 30,
-                      fontWeight: FontWeight.bold
-                  ),)),
+                      fontWeight: FontWeight.bold,
+                  ),),
                   SizedBox(height: 20,),
                 ],
               ),
               Column(
                 children: <Widget>[
-                  Padding( padding: EdgeInsets.only(top:30.0)),
+                  Padding( padding: EdgeInsets.only(top:10.0)),
         SignInButton(
             Buttons.Google,
             onPressed: () {},
             text: "Sign In with Google"
         ),
-        Padding( padding: EdgeInsets.only(top:40.0)),
+        Padding( padding: EdgeInsets.only(top:20.0)),
         new Column(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
@@ -61,22 +62,17 @@ class _SignInScreenState extends State<SignInScreen> {
             thickness: 2.0,
             color:Colors.grey[500]
         ),
-        Padding( padding: EdgeInsets.only(top:40.0)),
-                  FadeAnimation(1.3, makeInput(label: "Email")),
-                  FadeAnimation(1.4, makeInput(label: "Password", obscureText: true)),
+        Padding( padding: EdgeInsets.only(top:20.0)),
+              makeInput(label: "Email"),
+              makeInput(label: "Password", obscureText: true),
+              makeInput(label: "Confirm Password", obscureText: true),
                 ],
               ),
-              FadeAnimation(1.5, Container(
+            new Text('Forgot password ?' ,style: TextStyle(color:Colors.black38,),),
+            Padding(padding: const EdgeInsets.only(bottom: 15.0),),
+            Container(
                 padding: EdgeInsets.only(top: 3, left: 3),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(50),
-                    border: Border(
-                      bottom: BorderSide(color: Colors.black),
-                      top: BorderSide(color: Colors.black),
-                      left: BorderSide(color: Colors.black),
-                      right: BorderSide(color: Colors.black),
-                    )
-                ),
+
 
 
                 child:MaterialButton(
@@ -84,7 +80,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   height: 60,
                   onPressed: () {
                     Navigator.push(context, MaterialPageRoute(
-                        builder: (context) => Home()
+                        builder: (context) => CustomMessagePage()
                     ));
                   },
                   color: Colors.amber,
@@ -95,14 +91,15 @@ class _SignInScreenState extends State<SignInScreen> {
                   child: Text("Sign in", style: TextStyle(
                     fontWeight: FontWeight.w600,
                     fontSize: 18,
+                    color: Colors.white
 
                   ),),
                 ),
-              )),
-              FadeAnimation(1.6, Row(
+              ),
+             Row(
                 mainAxisAlignment: MainAxisAlignment.center,
 
-              )),
+              ),
             ],
           ),
         ]),

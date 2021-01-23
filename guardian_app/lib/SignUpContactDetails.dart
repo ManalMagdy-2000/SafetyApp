@@ -40,8 +40,7 @@ class _SignUpContactDetailsState extends State<SignUpContactDetails> {
               Container(
 
                 child:Align(
-                  alignment:Alignment.topLeft
-                  ,
+                  alignment:Alignment.topLeft,
                   child:RichText(text: TextSpan(
                       text: 'Contact \nDetails ',
                       style: TextStyle(color: Colors.grey[800],fontSize: 30,fontWeight:FontWeight.bold),
