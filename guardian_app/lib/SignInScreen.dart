@@ -48,13 +48,13 @@ class _SignInScreenState extends State<SignInScreen> {
               ),
               Column(
                 children: <Widget>[
-                  Padding( padding: EdgeInsets.only(top:10.0)),
+                  Padding( padding: EdgeInsets.only(top:30.0)),
         SignInButton(
             Buttons.Google,
             onPressed: () {},
             text: "Sign In with Google"
         ),
-        Padding( padding: EdgeInsets.only(top:20.0)),
+        Padding( padding: EdgeInsets.only(top:40.0)),
         new Column(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
@@ -62,10 +62,10 @@ class _SignInScreenState extends State<SignInScreen> {
             thickness: 2.0,
             color:Colors.grey[500]
         ),
-        Padding( padding: EdgeInsets.only(top:20.0)),
+        Padding( padding: EdgeInsets.only(top:40.0)),
               makeInput(label: "Email"),
               makeInput(label: "Password", obscureText: true),
-              makeInput(label: "Confirm Password", obscureText: true),
+    
                 ],
               ),
             new Text('Forgot password ?' ,style: TextStyle(color:Colors.black38,),),
