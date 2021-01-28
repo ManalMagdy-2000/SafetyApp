@@ -87,7 +87,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   color:Colors.black,
                 child:Align(
                   alignment:Alignment.bottomRight,
-                  child:new Icon(Icons.date_range_outlined,),
+                  child:new Icon(Icons.date_range),
                 )
                 ,
                 onPressed: () {
