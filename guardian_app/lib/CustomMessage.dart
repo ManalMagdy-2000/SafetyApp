@@ -98,17 +98,42 @@ class _CustomMessagePageState extends State<CustomMessagePage> {
                 });
               },
             ),
-            new Container(
+            Container(
+  child: Padding(
+    padding: const EdgeInsets.all(15.0),
+    child: TextField(
+      maxLength: 100,
+      minLines: 6,
+      maxLines: 8,
+      autocorrect: false,
+      decoration: InputDecoration(
+        hintText: 'Enter Message ...',
+        filled: true,
+        fillColor: Colors.white,
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(20.0)),
+          borderSide: BorderSide(color: Colors.grey),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(10.0)),
+          borderSide: BorderSide(color: Colors.grey),
+        ),
+      ),
+    ),
+  ),
+),
+          /*  new Container(
               alignment: Alignment.center,
-              height: 250.0,
+              height: 200.0,
               width: 320,
-              decoration: new BoxDecoration(color: Colors.grey[200]),
-              child: TextFormField(
-                decoration: InputDecoration(
-                  hintText: "Enter Message",
-                ),
+              decoration: new BoxDecoration(color: Colors.grey[200],
               ),
-            ),
+              child: TextField(
+                keyboardType: TextInputType.multiline,
+                maxLines: 16, 
+                maxLength: 100,
+              ),
+            )*/
             MaterialButton(
               minWidth: 280,
               height: 60,
