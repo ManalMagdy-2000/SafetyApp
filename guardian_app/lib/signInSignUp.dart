@@ -8,102 +8,70 @@ class SignInSignUp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Container(
-          width: double.infinity,
-          height: MediaQuery.of(context).size.height,
-          padding: EdgeInsets.symmetric(horizontal: 30, vertical: 50),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.center,
-
-
-                children: <Widget>[
-                  FadeAnimation(1, Text("Welcome", style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 30
-                  ),)),
-                  SizedBox(height: 20,),
-                  FadeAnimation(1.2, Text("Always with you. "
-                                          "Always protecting you",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        color: Colors.grey[700],
-                        fontSize: 15
-                    ),)
-
-
-
-                  ),
-                ],
-              ),
-              FadeAnimation(1.4, Container(
-                height: MediaQuery.of(context).size.height / 3,
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage('assets/splash-sc-logo.png'),
-
-                    )
-                ),
-              )),
-              Column(
-                children: <Widget>[
-                  FadeAnimation(1.5, MaterialButton(
-                    minWidth: double.infinity,
-                    height: 60,
-                    onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => SignInScreen()));
-                    },
-                    shape: RoundedRectangleBorder(
-                        side: BorderSide(
-                            color: Colors.black
-                        ),
-                        borderRadius: BorderRadius.circular(50)
-                    ),
-                    child: Text("Login", style: TextStyle(
-                        fontWeight: FontWeight.w600,
-                        fontSize: 18
-                    ),),
+      body: Center(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: <Widget>[
+            Padding(padding: const EdgeInsets.only(top: 60)),
+            FadeAnimation(
+                1,
+                Image.asset(
+                  'assets/splash-sc-logo.png',
+                  width: 100.0,
+                  height: 100.0,
+                )),
+            Padding(padding: const EdgeInsets.only(top: 120)),
+            FadeAnimation(
+              1.2,
+              Text("Always with you.\nAlways protecting you",
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                    color: Colors.grey[700],
+                    fontSize: 25,
                   )),
-                  SizedBox(height: 20,),
-                  FadeAnimation(1.6, Container(
-                    padding: EdgeInsets.only(top: 3, left: 3),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(50),
-                        border: Border(
-                          bottom: BorderSide(color: Colors.black),
-                          top: BorderSide(color: Colors.black),
-                          left: BorderSide(color: Colors.black),
-                          right: BorderSide(color: Colors.black),
-                        )
-                    ),
-                    child: MaterialButton(
-                      minWidth: double.infinity,
+            ),
+            Padding(padding: const EdgeInsets.only(top: 200)),
+            Column(
+              children: <Widget>[
+                FadeAnimation(
+                    1.3,
+                    MaterialButton(
+                      elevation: 0,
+                      color: Colors.amber,
+                      minWidth: 320,
                       height: 60,
                       onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpScreen()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => SignInScreen()));
                       },
-                      color: Colors.amber,
-                      elevation: 0,
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(50)
+                          borderRadius: BorderRadius.circular(50)),
+                      child: Text(
+                        "Sign In",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 20,
+                            color: Colors.white),
                       ),
-                      child: Text("Sign up", style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 18
-                      ),),
-                    ),
-                  ))
-                ],
-              )
-            ],
-          ),
+                    )),
+              ],
+            ),     
+          ],
         ),
       ),
+       /*   RichText(
+              text: TextSpan(
+                style: DefaultTextStyle.of(context).style,
+                children: <TextSpan>[
+                  TextSpan(text:'Don’t have an account?'),
+                  TextSpan(text: 'Sign up here.' ,style:TextStyle(fontWeight:FontWeight.bold,color: Colors.blue[800]))
+                ]
+              )   
+              ),*/
     );
   }
 }
