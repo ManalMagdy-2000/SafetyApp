@@ -3,6 +3,8 @@ import 'package:guardian_app/SignInScreen.dart';
 import 'package:guardian_app/SignUpScreen.dart';
 import 'package:flutter/widgets.dart';
 import 'package:guardian_app/animation/FadeAnimation.dart';
+import 'package:flutter/gestures.dart';
+
 
 class SignInSignUp extends StatelessWidget {
   @override
@@ -58,20 +60,29 @@ class SignInSignUp extends StatelessWidget {
                             color: Colors.white),
                       ),
                     )),
+                Padding(
+                  padding: const EdgeInsets.only(top: 10),
+                ),
+                RichText(
+                    text: TextSpan(
+                        style: DefaultTextStyle.of(context).style,
+                        children: <TextSpan>[
+                      TextSpan(
+                          text: 'Don’t have an account?',
+                          style: TextStyle(color: Colors.black, fontSize: 12)),
+                    /*  TextSpan(
+                          recognizer: new TapGestureRecognizer()..onTap = () => SignUpScreen(),
+                          text: '\tSign up here.',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.blue[900],
+                              fontSize: 10),),*/
+                    ])),
               ],
-            ),     
+            ),
           ],
         ),
       ),
-       /*   RichText(
-              text: TextSpan(
-                style: DefaultTextStyle.of(context).style,
-                children: <TextSpan>[
-                  TextSpan(text:'Don’t have an account?'),
-                  TextSpan(text: 'Sign up here.' ,style:TextStyle(fontWeight:FontWeight.bold,color: Colors.blue[800]))
-                ]
-              )   
-              ),*/
     );
   }
 }
