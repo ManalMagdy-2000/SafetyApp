@@ -33,6 +33,7 @@ dependencies:
   custom_navigator: ^0.3.0
   intl: ^0.16.1
 
+
   flutter:
     sdk: flutter
 
