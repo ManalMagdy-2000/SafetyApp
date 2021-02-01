@@ -98,10 +98,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                     Align(
                       alignment: Alignment.bottomLeft,
-                      child: Text('Date of Birth',style: TextStyle(),)
-                      ,),
-                      Padding(padding: const EdgeInsets.only(bottom: 5.0),),
-            
+                      child: Text(
+                        'Date of Birth',
+                        style: TextStyle(),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 5.0),
+                    ),
                     Container(
                       height: 50,
                       decoration: const BoxDecoration(
